@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import CharacterCard from './CharacterCard'
 import LocationCard from './LocationCard'
+import EpisodeCard from './EpisodesCard'
 
 
 export const Something = props => {
@@ -27,3 +28,15 @@ export const SomethingElse = props => {
       </>
     );
   };
+
+  export const SomethingElseElse = props => {
+
+    const [episodeState, setEpisodeState] = useState(props.episodes)
+      return (
+        <>
+        {
+        episodeState.map(episodeContent => <EpisodeCard name={episodeContent.name} date={episodeContent.air_date} episode={episodeContent.episode} characters={episodeContent.characters.legth} key={episodeContent.name}/>)
+        }
+        </>
+      );
+    };

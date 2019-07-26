@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import CharacterCard from './CharacterCard';
 import {SomethingElse} from "./Something"
 const axios = require('axios');
 let rickAndMortyLocationAPI = 'https://rickandmortyapi.com/api/location/'
@@ -22,7 +21,7 @@ export default function LocationsList() {
 <div>
   {content !== ''? <SomethingElse location={content}/>: console.log("Loading...") }
 </div>
-{console.log(content)}
+
     </section>
 
 }

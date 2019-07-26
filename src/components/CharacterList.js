@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import CharacterCard from './CharacterCard';
 import {Something} from "./Something"
 const axios = require('axios');
 let rickAndMortyAPI = 'https://rickandmortyapi.com/api/character/'
