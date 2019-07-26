@@ -22,7 +22,6 @@ export default function CharacterList() {
 <div>
   {content !== ''? <Something rick={content}/>: console.log("Loading...") }
 </div>
-{console.log(content)}
     </section>
 
 }
