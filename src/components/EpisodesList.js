@@ -18,9 +18,9 @@ export default function EpisodesList() {
   }, [API]);
 
   return <section className='character-list grid-view'>
-<div>
+
   {content !== ''? <SomethingElseElse episodes={content}/>: console.log("Loading...") }
-</div>
+
 {console.log(content)}
     </section>
 

@@ -18,9 +18,9 @@ export default function LocationsList() {
   }, [API]);
 
   return <section className='character-list grid-view'>
-<div>
+
   {content !== ''? <SomethingElse location={content}/>: console.log("Loading...") }
-</div>
+
 
     </section>
 

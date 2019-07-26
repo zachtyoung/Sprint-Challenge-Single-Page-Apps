@@ -18,9 +18,9 @@ export default function CharacterList() {
   }, [API]);
 
   return <section className='character-list grid-view'>
-<div>
+
   {content !== ''? <Something rick={content}/>: console.log("Loading...") }
-</div>
+
     </section>
 
 }
