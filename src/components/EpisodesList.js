@@ -1,27 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import {SomethingElseElse} from "./Something"
+import EpisodeCard from './EpisodesCard';
 const axios = require('axios');
-let rickAndMortyEpisodeAPI = 'https://rickandmortyapi.com/api/episode/'
 export default function EpisodesList() {
-  // TODO: Add useState to track data from useEffect
-  let [API] = useState(rickAndMortyEpisodeAPI)
-  let [content, setContent] = useState('');
+  let [content, setContent] = useState(null);
   useEffect(() => {
-    axios.get(API)
+    axios.get('https://rickandmortyapi.com/api/episode/')
     .then(res => {
       setContent(res.data.results)
-      
     })
     .catch(e => {
       console.log(e)
     });
-  }, [API]);
-
-  return <section className='character-list grid-view'>
-
-  {content !== ''? <SomethingElseElse episodes={content}/>: console.log("Loading...") }
-
-{console.log(content)}
+  }, []);
+  
+  return(
+    <section className='character-list grid-view'>
+    {content && content.map(el => <EpisodeCard name={el.name} date={el.air_date} episode={el.episode} characters={el.characters.legth} key={el.name}/>)}
     </section>
-
+  );
 }

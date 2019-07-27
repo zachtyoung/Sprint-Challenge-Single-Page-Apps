@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon} from 'semantic-ui-react'
 export default function EpisodeCard ({name, date, episode, characters}) {
   return (
     <Card>
@@ -19,3 +19,4 @@ export default function EpisodeCard ({name, date, episode, characters}) {
   </Card>
   )
 }
+
