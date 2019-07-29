@@ -1,21 +1,22 @@
 import React from 'react'
-import { Card, Icon } from 'semantic-ui-react'
-export default function LocationCard ({ name, type, dimension, residents }) {
+import { Card, Icon} from 'semantic-ui-react'
+export default function EpisodeCard ({name, date, episode, characters}) {
   return (
     <Card>
     <Card.Content>
       <Card.Header>{name}</Card.Header>
-      <Card.Meta>{type}</Card.Meta>
+      <Card.Meta>{date}</Card.Meta>
       <Card.Description>
-        {dimension}
+        {episode}
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
         <Icon name='user' />
-        {residents} Resident(s)
+        {characters} Characters
       </a>
     </Card.Content>
   </Card>
   )
 }
+
